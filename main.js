@@ -11,7 +11,7 @@ if (
 ) {
 	contents = $('#globalContainer');
 }
-else if (window.location.hostname === 'www.youtube.com') {
+if (window.location.hostname === 'www.youtube.com') {
 	contents = $('#content');
 }
 // console.log(contents);

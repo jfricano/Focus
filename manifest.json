@@ -1,0 +1,25 @@
+{
+	"manifest_version": 2,
+	"name": "Focus",
+	"version": "1.0.1",
+	"description": "A Chrome extension to block YouTube from loading content while trying to work",
+	"content_scripts": [
+		{
+			"matches": [
+				"https://www.youtube.com/*",
+				"https://www.facebook.com/*",
+				"https://web.facebook.com/*"
+			],
+      "js": ["./jquery-3.1.1.min.js", "./main.js"],
+      "css": ["./index.css"]
+		}
+	],
+	"icons": {
+		"16": "./focus16.png",
+		"48": "./focus48.png",
+		"128": "./focus128.png"
+	},
+	"browser_action": {
+		"default_popup": "./popup.html"
+	}
+}

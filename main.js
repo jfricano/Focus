@@ -2,11 +2,22 @@
 // const contents = document.getElementById('content');
 // contents.parentNode.removeChild(contents);
 
-// ***** pull relevant elements from fb, youtube ****** 
-const contents = $('#content');
+// ***** pull relevant elements from fb, youtube ******
+// const contents = $('#content');
+let contents;
+if (
+	window.location.hostname === 'www.facebook.com' ||
+	window.location.hostname === 'web.facebook.com'
+) {
+	contents = $('#globalContainer');
+}
+else if (window.location.hostname === 'www.youtube.com') {
+	contents = $('#content');
+}
+// console.log(contents);
 const parent = contents.parent();
 
-// *********** remove main container ************ 
+// *********** remove main container ************
 contents.remove();
 
 // *********** define new elements **************
@@ -25,7 +36,7 @@ const text = document.createTextNode('Get back to building your dreams');
 textContainer.id = 'beautText';
 
 // assemble new elements
-parent.prepend(background);
+parent.append(background);
 background.append(textContainer);
 textContainer.append(text);
 background.append(image);

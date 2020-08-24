@@ -36,7 +36,7 @@ const text = document.createTextNode('Get back to building your dreams');
 textContainer.id = 'beautText';
 
 // assemble new elements
-parent.append(background);
+parent.prepend(background);
 background.append(textContainer);
 textContainer.append(text);
 background.append(image);

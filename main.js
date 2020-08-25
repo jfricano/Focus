@@ -3,7 +3,6 @@
 // contents.parentNode.removeChild(contents);
 
 // ***** pull relevant elements from fb, youtube ******
-// const contents = $('#content');
 let contents;
 if (
 	window.location.hostname === 'www.facebook.com' ||
@@ -14,7 +13,6 @@ if (
 if (window.location.hostname === 'www.youtube.com') {
 	contents = $('#content');
 }
-// console.log(contents);
 const parent = contents.parent();
 
 // *********** remove main container ************

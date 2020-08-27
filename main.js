@@ -45,22 +45,3 @@ $(imageElement).click(function() {
   imageElement.src = randomImage();
   imageElement.load();
 });
-
-// EXPERIMENTAL STUFF -----------------------------
-// $(textContainer).click(function() {
-// 	textContainer.remove();
-// 	setTimeout( () => alert('The text was clicked\nText Removed'), 200);
-// });
-
-// EXPERIMENTAL - learn about AJAX
-// $.ajax({
-//   method: 'GET',
-//   url: 'https://unsplash.it/',
-//   success: function(result) {
-// 	 console.log(result);
-//   },
-//   error: function(err) {
-//    // if any errors occur during the process you can check out the
-//    // the error by logging the 'err' argument
-//   }
-// });

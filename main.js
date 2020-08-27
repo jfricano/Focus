@@ -20,9 +20,10 @@ contents.remove();
 
 // *********** define new elements **************
 // image
-const image = document.createElement('img');
-image.src =
-	'https://www.shadygrovefertility.com/blog/wp-content/uploads/2014/07/hang-in-there.jpg';
+const imageID = Math.floor(Math.random() * 993);	// webpage provides selection of 993 jpgs
+const imageURL = `https://unsplash.it/1200/800?image=${imageID}`;
+const imageElement = document.createElement('img');
+imageElement.src = imageURL;
 
 // background
 const background = document.createElement('div');
@@ -37,15 +38,28 @@ textContainer.id = 'beautText';
 parent.prepend(background);
 background.append(textContainer);
 textContainer.append(text);
-background.append(image);
+background.append(imageElement);
 
 // EXPERIMENTAL - functionality to make elements disappear when clicked
-// $(image).click(function() {
-// 	image.remove();
+// $(imageElement).click(function() {
+// 	imageElement.remove();
 // 	setTimeout( () => alert('An image was clicked!\nImage Removed'), 200);
 // });
 
 // $(textContainer).click(function() {
 // 	textContainer.remove();
 // 	setTimeout( () => alert('The text was clicked\nText Removed'), 200);
+// });
+
+// EXPERIMENTAL - learn about AJAX
+// $.ajax({
+//   method: 'GET',
+//   url: 'https://unsplash.it/',
+//   success: function(result) {
+// 	 console.log(result);
+//   },
+//   error: function(err) {
+//    // if any errors occur during the process you can check out the
+//    // the error by logging the 'err' argument
+//   }
 // });

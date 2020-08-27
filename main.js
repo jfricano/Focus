@@ -38,3 +38,14 @@ parent.prepend(background);
 background.append(textContainer);
 textContainer.append(text);
 background.append(image);
+
+// EXPERIMENTAL - functionality to make elements disappear when clicked
+// $(image).click(function() {
+// 	image.remove();
+// 	setTimeout( () => alert('An image was clicked!\nImage Removed'), 200);
+// });
+
+// $(textContainer).click(function() {
+// 	textContainer.remove();
+// 	setTimeout( () => alert('The text was clicked\nText Removed'), 200);
+// });

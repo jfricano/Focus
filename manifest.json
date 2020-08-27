@@ -15,11 +15,11 @@
     }
   ],
   "icons": {
-    "16": "./focus16.png",
-    "48": "./focus48.png",
-    "128": "./focus128.png"
+    "16": "./popUp/img/focus16.png",
+    "48": "./popUp/img/focus48.png",
+    "128": "./popUp/img/focus128.png"
   },
   "browser_action": {
-    "default_popup": "./popup.html"
+    "default_popup": "./popUp/popup.html"
   }
 }

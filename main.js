@@ -44,7 +44,6 @@ background.append(imageElement);
 $(imageElement).click(function() {
 	imageElement.src = randomImage();
 	imageElement.load();	
-	setTimeout( () => alert('An image was clicked!\nImage Removed'), 200);
 });
 
 // EXPERIMENTAL STUFF -----------------------------

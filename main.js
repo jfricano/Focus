@@ -1,6 +1,8 @@
-// old code using sans jQuery syntax
-// const contents = document.getElementById('content');
-// contents.parentNode.removeChild(contents);
+// returns random image from unsplash.it catalog of 993 images
+function randomImage() {
+	const imageID = Math.floor(Math.random() * 993);	
+	return `https://unsplash.it/1200/800?image=${imageID}`;
+}
 
 // ***** pull relevant elements from fb, youtube ******
 let contents;
@@ -20,10 +22,8 @@ contents.remove();
 
 // *********** define new elements **************
 // image
-const imageID = Math.floor(Math.random() * 993);	// webpage provides selection of 993 jpgs
-const imageURL = `https://unsplash.it/1200/800?image=${imageID}`;
 const imageElement = document.createElement('img');
-imageElement.src = imageURL;
+imageElement.src = randomImage();
 
 // background
 const background = document.createElement('div');
@@ -40,12 +40,14 @@ background.append(textContainer);
 textContainer.append(text);
 background.append(imageElement);
 
-// EXPERIMENTAL - functionality to make elements disappear when clicked
-// $(imageElement).click(function() {
-// 	imageElement.remove();
-// 	setTimeout( () => alert('An image was clicked!\nImage Removed'), 200);
-// });
+// reload new image when clicked
+$(imageElement).click(function() {
+	imageElement.src = randomImage();
+	imageElement.load();	
+	setTimeout( () => alert('An image was clicked!\nImage Removed'), 200);
+});
 
+// EXPERIMENTAL STUFF -----------------------------
 // $(textContainer).click(function() {
 // 	textContainer.remove();
 // 	setTimeout( () => alert('The text was clicked\nText Removed'), 200);

@@ -1,6 +1,8 @@
 # Focus - Distraction Blocker
 A Chrome productivity extension to block youTube, facebook from loading and deliver inspirational message instead
 
+This is a project culminating from Codesmith's free CSX course that teaches the fundamentals of functional and object-oriented coding in JavaScript.  https://csx.codesmith.io
+
 How to install:  
 
 1. Download all files in the package
